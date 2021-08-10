@@ -1,8 +1,13 @@
 .header {
-  display: flex;
+  grid-row: header-s/header-e;
+  grid-column: left-s/right-e;
+  display: grid;
+  justify-content: center;
 }
 
 .navbar {
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  grid-row: navbar-s/navbar-e;
+  grid-column: left-s/right-e;
   background-color: #333;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
