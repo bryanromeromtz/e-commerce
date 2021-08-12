@@ -39,13 +39,13 @@ class SignInForm extends Component {
           placeholder='Password'
           name='password'
           component={FormInput} />
-        <div className="sign-in-form__line"></div>
+        <div className='sign-in-form__line'></div>
         <Field className='sign-in-form__login'
           type='submit'
           title='Login'
           name='login'
           component={FormButton} />
-        <Details title="QuickLinks" links={links} className="sign-in-form__details" />
+        <Details className='sign-in-form__details' title='QuickLinks' links={links} />
       </form>
     );
   }

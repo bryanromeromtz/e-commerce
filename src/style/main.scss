@@ -17,7 +17,10 @@ body {
 
 @import "layout";
 @import "header-navbar";
-@import "auth/signin.scss";
-@import "auth/signup";
 @import "page-title";
-@import "form-fields.scss";
+@import "form-fields";
+@import "details";
+
+// AUTH
+@import "auth/signin";
+@import "auth/signup";

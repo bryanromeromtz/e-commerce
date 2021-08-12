@@ -5,6 +5,7 @@
   & > * {
     padding-left: 20px;
   }
+
   &__label {
     font-size: 14px;
   }
@@ -14,7 +15,7 @@
     width: 426px;
     border: 1px solid #e6e6e6;
     border-radius: 20px;
-    color: #333;
+    color: #333333;
     font-size: 18px;
   }
 }
@@ -25,8 +26,9 @@
     width: 243px;
     border-radius: 20px;
     background-color: #00cb79;
-    color: white;
+
     font-size: 16px;
+    color: white;
 
     &:focus {
       outline: none;
