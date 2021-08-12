@@ -15,6 +15,7 @@
     grid-row-gap: 10px;
     & > * {
       text-decoration-line: underline;
+      cursor: pointer;
     }
     .details__item {
       text-decoration-line: none;
