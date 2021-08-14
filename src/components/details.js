@@ -1,18 +1,34 @@
 import React, { Component } from 'react';
 
 class Details extends Component {
+
+  renderChildren = () => {
+    const { links, infos } = this.props;
+    let children = [];
+    if (links) {
+      children = links.map((link) => {
+        return (
+          <a onClick={link.onClick} key={link._id} className="details__link">{link.title}</a>
+        )
+      });
+    }
+    else if (infos) {
+      children = infos.map((item) => {
+        return (
+          <div key={item._id} className="details__item">{item.title}</div>
+        )
+      });
+    }
+    return children;
+  }
   render() {
-    const { title, links, className } = this.props;
+    const { title, className } = this.props;
     return (
       <div className={`${className} details`}>
         <div className="details__title">{title}</div>
-        <div className="details__links">
+        <div className="details__items">
           {
-            links.map((link) => {
-              return (
-                <a onClick={link.onClick} key={link._id} className="details__link">{link.title}</a>
-              )
-            })
+            this.renderChildren()
           }
         </div>
       </div>

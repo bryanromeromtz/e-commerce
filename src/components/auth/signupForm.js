@@ -2,27 +2,24 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 
 import { FormInput, FormButton } from '../formFields';
-import Details from '../details'
-import history from '../../history'
+import Details from '../details';
+import history from '../../history';
 
 class SignUpForm extends Component {
   render() {
     const { className, handleSubmit } = this.props;
-    const links = [
+    const infos = [
       {
         _id: 0,
-        title: "Not registered? Create accout here.",
-        onClick: () => history.push("/signup")
+        title: "At least 6 characters."
       },
       {
         _id: 1,
-        title: "Forgot accout email?",
-        onClick: () => console.log("email")
+        title: "At least 1 number"
       },
       {
         _id: 2,
-        title: "Forgot Password?",
-        onClick: () => console.log("password")
+        title: "At least one symbol"
       }
     ]
     return (
@@ -45,7 +42,7 @@ class SignUpForm extends Component {
           placeholder='Password'
           name='password'
           component={FormInput} />
-        <Field className='sign-up-form__confirm-password'
+        <Field className='sign-up-form__confirm'
           type='password'
           title='Confirm Password'
           placeholder='Confirm Password'
@@ -56,17 +53,19 @@ class SignUpForm extends Component {
         <div className='sign-up-form__line'></div>
 
         <Field className='sign-up-form__login'
+          onClick={() => history.push("/account")}
           type='submit'
-          title='Login'
+          title='Create Account'
           name='login'
           component={FormButton} />
         <Field className='sign-up-form__back'
+          onClick={() => history.push("/signin")}
           type='button'
           title='back'
           name='back'
           short={true}
           component={FormButton} />
-        <Details className='sign-up-form__details' title='QuickLinks' links={links} />
+        <Details className='sign-up-form__details' title='Password requirements' infos={infos} />
       </form>
     );
   }
@@ -77,4 +76,3 @@ SignUpForm = reduxForm({
 })(SignUpForm);
 
 export default SignUpForm;
-

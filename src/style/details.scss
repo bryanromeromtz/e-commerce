@@ -9,16 +9,18 @@
     font-weight: 600;
   }
 
-  &__links {
+  &__items {
     font-size: 14px;
     display: grid;
     grid-row-gap: 10px;
+
     & > * {
       text-decoration-line: underline;
       cursor: pointer;
     }
     .details__item {
       text-decoration-line: none;
+      cursor: default;
     }
   }
 }
