@@ -25,12 +25,20 @@ class Account extends Component {
       }
     ]
 
-    this.props.setHeaderLinks();
+    this.props.setHeaderLinks([]);
     this.props.setNavbarLinks(navbarLinks);
   }
 
   renderContent = () => {
-    return <h1>Content</h1>
+    let jsx;
+    if (this.props.navbarLinks) {
+      this.props.navbarLinks.forEach((link) => {
+        if (link.active) {
+          jsx = link.component;
+        }
+      })
+    }
+    return jsx
   }
 
 
