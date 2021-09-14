@@ -5,7 +5,7 @@ import {
 
 const INITIAL_STATE = {
   headerLinks: [],
-  navbarLinks: [],
+  navbarLinks: []
 }
 
 export default function (state = INITIAL_STATE, action) {
@@ -13,14 +13,14 @@ export default function (state = INITIAL_STATE, action) {
     case SET_HEADER_LINKS:
       return {
         ...state,
-        headerLinks: action.payload,
+        headerLinks: action.payload
       }
     case SET_NAVBAR_LINKS:
       return {
         ...state,
         navbarLinks: action.payload,
       }
-    default:
-      return state;
+
+    default: return state;
   }
 }
