@@ -6,7 +6,6 @@ import headerNavbar from './headernavbarReducer';
 const rootReducer = combineReducers({
   form,
   headerNavbar,
-
 });
 
 export default rootReducer;
