@@ -1,6 +1,14 @@
 import {
-  SET_USER_PURCHASES
+  SET_USER_PURCHASES,
+  SET_PURCHASE_DETAIL,
 } from './types';
+
+export function setPurchaseDetail(_id) {
+  return ({
+    type: SET_PURCHASE_DETAIL,
+    payload: _id
+  })
+}
 
 export function fetchUserPurchases() {
   return ({
@@ -11,9 +19,9 @@ export function fetchUserPurchases() {
         total: 19.40,
         orderNumber: 'A565SS2FGHR',
         orderDate: new Date(),
+        creditCard: '-0000',
         user: {
           userName: 'Bryan Faraone',
-          creditCard: '-0000',
           shippingAddress: '1234 Guadalajara Jal'
         }
       },
