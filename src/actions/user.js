@@ -18,10 +18,10 @@ export function fetchUserPurchases() {
         _id: 0,
         total: 19.40,
         orderNumber: 'A565SS2FGHR',
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
         creditCard: '-0000',
         user: {
-          userName: 'Bryan Faraone',
+          name: 'Bryan Faraone',
           shippingAddress: '1234 Guadalajara Jal'
         }
       },
@@ -29,10 +29,10 @@ export function fetchUserPurchases() {
         _id: 1,
         total: 9.00,
         orderNumber: 't5S6SDDDFVVD',
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
+        creditCard: '-0000',
         user: {
-          userName: 'Troikadedra',
-          creditCard: '-0000',
+          name: 'Troikadedra',
           shippingAddress: '1234 Guadalajara Jal'
         }
       },
@@ -40,50 +40,50 @@ export function fetchUserPurchases() {
         _id: 2,
         total: 13.20,
         orderNumber: 'FG62211D4HR',
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
+        creditCard: '-0000',
         user: {
-          userName: 'Musgodelick',
-          creditCard: '-0000',
+          name: 'Musgodelick',
           shippingAddress: '1234 Guadalajara Jal'
         }
       }, {
         _id: 3,
         total: 9.00,
         orderNumber: 'H5D4F45F5D5',
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
+        creditCard: '-0000',
         user: {
-          userName: 'Neo Fvtvre',
-          creditCard: '-0000',
+          name: 'Neo Fvtvre',
           shippingAddress: '1234 Guadalajara Jal'
         }
       }, {
         _id: 4,
         total: 9.00,
         orderNumber: 'T54DDVSAZX44',
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
+        creditCard: '-0000',
         user: {
-          userName: 'Daner Covar',
-          creditCard: '-0000',
+          name: 'Daner Covar',
           shippingAddress: '1234 Guadalajara Jal'
         }
       }, {
         _id: 5,
         total: 11.50,
         orderNumber: 'A565SS2FGHR',
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
+        creditCard: '-0000',
         user: {
-          userName: 'Ashely Sowel',
-          creditCard: '-0000',
+          name: 'Ashely Sowel',
           shippingAddress: '1234 Guadalajara Jal'
         }
       }, {
         _id: 6,
         total: 6.00,
         orderNumber: 'ERGVS4XD555',
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
+        creditCard: '-0000',
         user: {
-          userName: 'Melanie Guadalupe',
-          creditCard: '-0000',
+          name: 'Melanie Guadalupe',
           shippingAddress: '1234 Guadalajara Jal'
         }
       },
@@ -91,10 +91,10 @@ export function fetchUserPurchases() {
         _id: 7,
         total: 4.56,
         orderNumber: 'R5S456EEDFR5',
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
+        creditCard: '-0000',
         user: {
-          userName: 'Nataly Valenzuela',
-          creditCard: '-0000',
+          name: 'Nataly Valenzuela',
           shippingAddress: '1234 Guadalajara Jal'
         }
       },
