@@ -45,10 +45,13 @@
   display: grid;
   grid-template-rows: [s] 1fr [e];
   align-items: center;
+
   justify-content: center;
   grid-column-gap: 40px;
+
   color: #e6e6e6;
   font-size: 18px;
+  font-weight: normal;
 
   & > * {
     grid-row: s/e;

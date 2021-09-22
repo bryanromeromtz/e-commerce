@@ -28,7 +28,7 @@ class PurchaseDetail extends Component {
       <div className={`${className} purchase-detail`}>
         <PurchaseDetailLabel
           className="purchase-detail__order-number"
-          title="OrderNumber"
+          title="Order Number"
           value={orderNumber}
         />
         <PurchaseDetailLabel
