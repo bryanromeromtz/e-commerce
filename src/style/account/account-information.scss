@@ -46,4 +46,8 @@
       width: 200px;
     }
   }
+  &__change-password {
+    grid-column: s/s-e;
+    transform: translatey(38px);
+  }
 }
