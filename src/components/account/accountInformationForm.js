@@ -2,9 +2,19 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 
 import { FormInput, LongGrayButton } from '../formFields';
-import history from '../../history'
 
 class AccountInformationForm extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showPasswords: false,
+    }
+  }
+
+  handleChangePassword = () => {
+    this.setState({ showPasswords: true })
+  }
+
   render() {
     const { className, handleSubmit } = this.props;
     return (
@@ -15,6 +25,7 @@ class AccountInformationForm extends Component {
           placeholder='Name'
           name='name'
           component={FormInput} />
+
         <Field className='account-information-form__email'
           type='email'
           title='Email'
@@ -28,6 +39,7 @@ class AccountInformationForm extends Component {
           placeholder='Street Address'
           name=''
           component={FormInput} />
+
         <Field className='account-information-form__city'
           type='city'
           title='City'
@@ -41,6 +53,7 @@ class AccountInformationForm extends Component {
           placeholder='State'
           name='state'
           component={FormInput} />
+
         <Field className='account-information-form__zipcode'
           type='zipcode'
           title='Zipcode'
@@ -48,13 +61,40 @@ class AccountInformationForm extends Component {
           name='zipcode'
           component={FormInput} />
 
-        <Field className='account-information-form__change-password'
-          onClick={() => console.log('Change Password')}
-          type='button'
-          labelTitle='Password'
-          title='Change Password'
-          name='change-password'
-          component={LongGrayButton} />
+        {
+          this.state.showPasswords
+            ?
+            (
+              [
+                <Field key={Math.random()} className='account-information-form__current'
+                  type='password'
+                  title='Current Password'
+                  placeholder='Current Password'
+                  name='current'
+                  component={FormInput} />,
+                <Field key={Math.random()} className='account-information-form__new'
+                  type='password'
+                  title='New Password'
+                  placeholder='New Password'
+                  name='new'
+                  component={FormInput} />,
+                <Field key={Math.random()} className='account-information-form__confirm'
+                  type='password'
+                  title='Confirm Password'
+                  placeholder='Confirm Password'
+                  name='confirm'
+                  component={FormInput} />
+              ]
+            )
+            :
+            (<Field className='account-information-form__change-password'
+              onClick={() => this.handleChangePassword()}
+              type='button'
+              labelTitle='Password'
+              title='Change Password'
+              name='change-password'
+              component={LongGrayButton} />)
+        }
       </form>
     );
   }

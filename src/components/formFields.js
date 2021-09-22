@@ -38,7 +38,6 @@ export class LongGrayButton extends Component {
         <label className='form-button-long-gray__label'>{labelTitle}</label>
         <button className="form-button-long-gray__button"
           type={type}
-          labelTitle={labelTitle}
           {...input}
           onClick={onClick}
         >
