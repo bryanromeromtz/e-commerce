@@ -15,12 +15,14 @@ class Shop extends Component {
     ]
 
     this.props.setHeaderLinks(headerLinks);
+    this.props.fetchShopCategories();
+
+
   }
 
   render() {
     return (
       <div className="shop">
-        Shop...
       </div>
     )
   }
