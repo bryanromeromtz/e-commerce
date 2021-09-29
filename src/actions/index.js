@@ -12,7 +12,8 @@ import {
 import {
   fetchShopCategories,
   fetchShopProducts,
-  filterProductsWithCategorieId
+  filterProductsWithCategorieId,
+  filterProductsWithQuery
 } from './shop';
 
 export {
@@ -25,5 +26,6 @@ export {
 
   fetchShopCategories,
   fetchShopProducts,
-  filterProductsWithCategorieId
+  filterProductsWithCategorieId,
+  filterProductsWithQuery
 };
