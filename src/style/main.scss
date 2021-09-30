@@ -30,11 +30,15 @@ body {
 @import "auth/signin";
 @import "auth/signup";
 
-//ACCOUNT
+// ACCOUNT
 @import "/account/account";
 @import "/account/purchase-history";
 @import "/account/account-information";
 
-//SHOP
+// SHOP
 @import "shop/shop";
 @import "shop/shop-search-bar";
+
+// QUANTITY
+@import "shop/quantity";
+@import "green-price-tag";
