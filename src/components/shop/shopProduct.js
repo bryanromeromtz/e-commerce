@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Quantity from './quantity';
+import Quantity from '../quantity';
 import GreenPriceTag from '../greenPriceTag';
 
 class ShopProduct extends Component {
