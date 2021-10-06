@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-
 import { reduxForm, Field } from 'redux-form';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 
 function FormSearchBar(props) {
   return (
     <div className='search-bar-grid'>
-      <i className="fas fa-search search-bar-grid__icon"></i>
+      <FontAwesomeIcon icon={faSearch} className="search-bar-grid__icon" />
       <input className={`${props.className} form-search-bar search-bar-grid__input`} {...props.input} type='text' placeholder={`${props.placeholder}`} />
     </div>
   )

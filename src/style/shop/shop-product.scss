@@ -1,11 +1,28 @@
+//PLACE FRONT AND BACK ON TOP OF EACH OTHER
 .shop-product {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1/-1;
+  grid-template-columns: 1/-1;
+
+  & > * {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+  }
+}
+
+// FLIP CARD
+
+.shop-product {
+  perspective: 150rem;
+  --webkit-perspective: 150rem;
   &__front,
   &__back {
     backface-visibility: hidden;
     transition: all 0.3s ease;
   }
   &__back {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
   &:hover &__front {
     transform: rotateY(-180deg);
